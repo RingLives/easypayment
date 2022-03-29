@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ringlives\\Easypayment\\SanctumServiceProvider"
+                "Ringlives\\Easypayment\\EasypaymentServiceProvider"
             ]
         }
     },
