@@ -41,7 +41,7 @@ class Easypayment
     public static function bkash(array $options = [])
     {
         return new StripeClient(array_merge([
-            'api_key' => $options['api_key'] ?? config('cashier.secret'),
+            'api_key' => $options['api_key'] ?? config('easypayment.api_key'),
             'bkash_version' => Bkash::STRIPE_VERSION,
             'api_base' => Bkash::getBaseUrl(),
         ], $options));
@@ -72,9 +72,9 @@ class Easypayment
             return call_user_func(static::$formatCurrencyUsing, $amount, $currency);
         }
 
-        $money = new Money($amount, new Currency(strtoupper($currency ?? config('cashier.currency'))));
+        $money = new Money($amount, new Currency(strtoupper($currency ?? config('easypayment.currency'))));
 
-        $locale = $locale ?? config('cashier.currency_locale');
+        $locale = $locale ?? config('easypayment.currency_locale');
 
         $numberFormatter = new NumberFormatter($locale, NumberFormatter::CURRENCY);
         $moneyFormatter = new IntlMoneyFormatter($numberFormatter, new ISOCurrencies());

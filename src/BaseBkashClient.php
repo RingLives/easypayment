@@ -18,10 +18,10 @@ class BaseBkashClient
 
     public function __construct() {
         $this->config =  [
-            'app_key' => config('esaypayment.bkash.app_key'),
-            'app_secret' => config('esaypayment.bkash.app_secret'),
-            'username' => config('esaypayment.bkash.username'),
-            'password' => config('esaypayment.bkash.password'),
+            'app_key' => config('easypayment.bkash.app_key'),
+            'app_secret' => config('easypayment.bkash.app_secret'),
+            'username' => config('easypayment.bkash.username'),
+            'password' => config('easypayment.bkash.password'),
         ];
     }
 

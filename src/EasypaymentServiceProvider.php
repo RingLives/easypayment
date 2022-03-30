@@ -14,7 +14,7 @@ class EasypaymentServiceProvider extends ServiceProvider
     public function register()
     {
         if (! app()->configurationIsCached()) {
-            $this->mergeConfigFrom(__DIR__.'/../config/esaypayment.php', 'esaypayment');
+            $this->mergeConfigFrom(__DIR__.'/../config/easypayment.php', 'easypayment');
         }
     }
 
@@ -28,8 +28,8 @@ class EasypaymentServiceProvider extends ServiceProvider
         if (app()->runningInConsole()) {
 
             $this->publishes([
-                __DIR__.'/../config/esaypayment.php' => config_path('esaypayment.php'),
-            ], 'esaypayment-config');
+                __DIR__.'/../config/easypayment.php' => config_path('easypayment.php'),
+            ], 'easypayment-config');
         }
     }
 }
