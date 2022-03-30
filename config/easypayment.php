@@ -11,7 +11,7 @@ return [
     |
     */
 
-	'mode' => env('ESAYPAYMENT_MODE', 'sandbox'),
+	'mode' => env('EASYPAYMENT_MODE', 'sandbox'),
 
 	/*
     |--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ return [
     |
     */
 
-    'currency' => env('CASHIER_CURRENCY_LOCALE', 'BDT'),
+    'currency' => env('EASYPAYMENT_CURRENCY', 'BDT'),
 
     /*
     |--------------------------------------------------------------------------
@@ -37,7 +37,7 @@ return [
     |
     */
 
-    'currency_locale' => env('ESAYPAYMENT_CURRENCY', 'bdt'),
+    'currency_locale' => env('EASYPAYMENT_CURRENCY_LOCALE', 'bdt'),
 
     /*
     |--------------------------------------------------------------------------
