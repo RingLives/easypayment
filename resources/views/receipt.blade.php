@@ -1,0 +1,1 @@
+receipt.blade.php
